@@ -1,0 +1,253 @@
+:root{
+  --beard-kit-primary-color: #9B948A
+}
+
+@font-face{
+  font-family: "Neue Machina";
+  src: url(https://res.cloudinary.com/aremusmog/raw/upload/v1626342911/beard-kit/fonts/NeueMachina-Regular_efhthu.ttf);
+  font-weight: 400;
+}
+
+@font-face{
+  font-family: "Neue Machina";
+  src: url(https://res.cloudinary.com/aremusmog/raw/upload/v1626342909/beard-kit/fonts/NeueMachina-Bold_gf7e9u.ttf);
+  font-weight: bold;
+}
+
+@font-face{
+  font-family: "Neue Machina";
+  src: url(https://res.cloudinary.com/aremusmog/raw/upload/v1626342909/beard-kit/fonts/NeueMachina-Bold_gf7e9u.ttf);
+  font-weight: bold;
+}
+
+*{
+  box-sizing: border-box;
+}
+body{
+  background: black;
+  box-sizing: border-box;
+  color: var(--beard-kit-primary-color);
+  font-size: 18px;
+  font-family: "Neue machina";
+}
+
+.container{
+  max-width: 1400px;
+  margin: auto;
+  padding: 0 0.75em;
+}
+
+.show-on-mobile{
+  display: none;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+#header{ 
+  position: sticky;
+  width: 100%;
+  background-color:black;
+  left: 0;
+  top: 0;
+  z-index: 10;
+  padding: 0.5em 0;
+}
+
+#header .container{
+   display: flex;
+  justify-content: space-between;
+}
+#header-img{
+  width: 200px;
+}
+
+
+#nav-bar .nav-link{
+  display: inline-block;
+  margin-left: 1em;
+  padding: 0;
+  background: none;
+  outline: none;
+  border:none;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: "Neue Machina";
+    color: var(--beard-kit-primary-color);
+}
+#nav-bar .nav-link:active{
+  text-decoration: underline;
+}
+
+#hero{
+  position: relative;
+  height: 100vh;
+  min-height: fit-content;
+  display: flex;
+  align-items: center;
+  margin-top: 2em;
+}
+
+#hero h1{
+  font-size: 10vw;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--beard-kit-primary-color);
+  line-height: 1;
+  width: 90%;
+  margin-top: 0px;
+  font-family: "Neue Machina"
+}
+
+#hero img{
+  position: absolute;
+  right: 50%;
+    opacity: 0.3;
+  top: 0;
+  z-index:-1;
+  max-width: 450px;
+  animation: hero-img-animation 1.5s  1s forwards ease-in-out;
+}
+
+@keyframes hero-img-animation{
+  0%{
+    right: 50%;
+    opacity: 0.3
+  }
+  50%{
+    opacity: 1;
+  }
+  100%{
+    top: 0;
+    right: 0;
+    opacity: 1;
+  }
+}
+
+#video{
+  display: block;
+  margin:4em auto; 
+  width: 100%;
+  max-width: 800px;
+  height: 500px;
+}
+
+
+#join-the-gang h3{
+  text-align: center;
+  color: transparent;
+  -webkit-text-stroke: 0.5px var(--beard-kit-primary-color);
+  font-size: 80px;
+}
+
+#form{
+  margin: auto;
+  margin-top: -2em;
+  display: block;
+  width: fit-content;
+}
+
+input{
+  background: none;
+  outline: none;
+  padding: 1em;
+  border: 1px solid var(--beard-kit-primary-color);
+  width: 400px;
+  font-family: "Neue Machina";
+  color: var(--beard-kit-primary-color);
+}
+
+input[type="submit"]{
+  background: var(--beard-kit-primary-color);
+  width: 150px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: black;
+  cursor: pointer;
+}
+
+
+#footer{
+  text-align: center;
+  font-size: 12px;
+  padding: 8em 0px;
+}
+
+#footer a{
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 768px){
+  #header{
+    padding: 1em inherit;
+  }
+  #header-img{
+  width: 130px;
+  
+}
+  #hero{
+  align-items: flex-start;
+}
+  
+  #nav-bar{
+    display: none;
+  }
+
+  #hero h1{
+  font-size: 18vw;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--beard-kit-primary-color);
+    padding-top: 1em;
+
+}
+
+  #hero img{
+  top: 0%;
+    right: 0;
+  max-width: 250px;
+
+}
+@keyframes hero-img-animation{
+  0%{
+    top: 0;
+    opacity: 0.3
+  }
+  50%{
+    opacity: 1;
+  }
+  100%{
+    top: 38%;
+    right: 0;
+    opacity: 1;
+  }
+}
+
+
+  #video{
+    height: 230px;
+    margin:0;
+  }
+  
+ 
+ #join-the-gang h3{
+  text-align: left;
+  font-size: 45px;
+   margin-top:4em;
+}
+  
+  #form{
+    margin: inherit  0;
+    width: 100%;
+  }
+  input, input[type="submit"]{
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  #footer{
+    margin: 1em 0;
+  }
+  .show-on-mobile{
+    display: inline;
+  }
+}
